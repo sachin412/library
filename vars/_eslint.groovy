@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String buildStatus = 'STARTED'){
+def call(){
  
  checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'eslint.xml', unHealthy: ''
  
