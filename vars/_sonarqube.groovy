@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String buildStatus = 'STARTED'){
+def call(){
  
   sh 'npm install sonarqube-scanner --save-dev'      
  
