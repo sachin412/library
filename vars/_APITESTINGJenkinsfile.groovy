@@ -5,6 +5,7 @@ def call(){
   pipeline {
     agent any
     options { buildDiscarder(logRotator(numToKeepStr: '3')) }
+    options { timestamps() }
     stages {        
         stage ('pre-build') {
             steps {
