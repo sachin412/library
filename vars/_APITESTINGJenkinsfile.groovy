@@ -4,10 +4,10 @@ def call(){
  
   pipeline {
     agent any
-    when { not { branch 'master' } }
     options { buildDiscarder(logRotator(numToKeepStr: '3')); timestamps() }    
     stages {        
-        stage ('pre-build') {
+         when { not { branch 'master' } }  
+     stage ('pre-build') {
             steps {
                      sh 'npm install'     
             }
