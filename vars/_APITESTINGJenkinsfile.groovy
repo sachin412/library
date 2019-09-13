@@ -5,9 +5,9 @@ def call(){
   pipeline {
     agent any
     options { buildDiscarder(logRotator(numToKeepStr: '3')); timestamps() }    
-    stages {        
-         when { not { branch 'master' } }  
-     stage ('pre-build') {
+    stages {       
+        stage ('pre-build') {
+          when { not { branch 'master' } }  
             steps {
                      sh 'npm install'     
             }
