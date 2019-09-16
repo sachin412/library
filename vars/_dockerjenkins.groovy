@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(){
- 
+def call(){ 
   pipeline {
     agent {
         docker { image 'node'
