@@ -29,7 +29,7 @@ def call(){
             }
         }    
     }   
-
+/*
 post {
    failure {
       email()
@@ -45,5 +45,5 @@ post {
    } 
   }
  }
-
+*/
 }
