@@ -13,7 +13,8 @@ def call(){
         }
         stage('eslint') {
             steps {                    
-                    _eslintcommand()                            
+                    _eslintcommand() 
+                     _env()
             }
         }
      stage ('test') {
