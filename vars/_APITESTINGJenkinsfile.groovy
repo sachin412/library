@@ -8,7 +8,8 @@ def call(){
     stages {       
         stage ('pre-build') {           
             steps {
-                     sh 'npm install'     
+                     sh 'npm install'
+                       env()
             }
         }
         stage('eslint') {
