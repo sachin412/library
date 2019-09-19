@@ -2,6 +2,7 @@
 
 def call(){
    sh 'cd /var/lib/jenkins/workspace/'
-  sh(script: name='git show -s --pretty=%an', returnStdout: true)
+   name = "'git show -s --pretty=%an'"
+  sh(script: name , returnStdout: true)
    sh 'echo "$name"'
 }
