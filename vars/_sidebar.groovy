@@ -5,6 +5,7 @@ def call(){
  usrname = sh ' cut -d " " -f 2 name.txt '
  
  addBadge icon: 'folder.gif', id: '', link: 'https://github.com/sachin412/newnode.git', text: ''
- addShortText background: 'yellow', borderColor: '', color: '', link: '', text: '${usrname}'
+ addBadge icon: '', id: '', link: '', text: '${usrname}'
+// addShortText background: 'yellow', borderColor: '', color: '', link: '', text: '${usrname}'
 
  }
