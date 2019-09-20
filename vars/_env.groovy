@@ -2,7 +2,7 @@
 
 def call(){  
 
-    sh 'name = git log -1 | grep Author | awk "{print $2}"'
-    
+    sh 'name = $(git log -1 | grep Author | awk "{print $2}")'
+    sh 'echo $name'
     
 }
