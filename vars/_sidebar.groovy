@@ -3,9 +3,7 @@
 def call(){  
  sh 'git log -1 | grep Author | awk "{print $2}" > name.txt'
  usrname = sh ' cut -d " " -f 2 name.txt '
- 
+ ret=$?
  addBadge icon: 'folder.gif', id: '', link: 'https://github.com/sachin412/newnode.git', text: ''
- addBadge icon: '', id: '', link: '', text: '${usrname}'
-// addShortText background: 'yellow', borderColor: '', color: '', link: '', text: '${usrname}'
-
+  addShortText background: 'yellow', borderColor: '', color: '', link: '', text: '$ret'
  }
