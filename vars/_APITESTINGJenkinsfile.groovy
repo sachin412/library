@@ -8,6 +8,7 @@ def call(){
     stages {       
         stage ('pre-build') {           
             steps {
+                     sh 'apt install npm -y'
                      sh 'npm install'
                        
             }
