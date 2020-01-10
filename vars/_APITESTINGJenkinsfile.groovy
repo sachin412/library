@@ -7,11 +7,9 @@ def call(){
     options { buildDiscarder(logRotator(numToKeepStr: '3')); timestamps() }    
     stages {       
         stage ('pre-build') {           
-            steps {
-                     sh 'sudo apt install npm -y'
+            steps { 
                      sh 'npm install'
-                       
-            }
+                 }
         }
         stage('eslint') {
             steps {                    
